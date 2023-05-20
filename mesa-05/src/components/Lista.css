@@ -1,0 +1,21 @@
+.cidade-card {
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.cidade-card h2 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.cidade-card h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.cidade-card p {
+  margin-bottom: 10px;
+}

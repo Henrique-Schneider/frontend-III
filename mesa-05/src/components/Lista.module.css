@@ -1,0 +1,26 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.cidade-card {
+  padding: 20px;
+  border-radius: 5px;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.cidade-card h2 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.cidade-card h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.cidade-card p {
+  margin-bottom: 10px;
+}
