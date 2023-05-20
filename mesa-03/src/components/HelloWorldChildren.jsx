@@ -2,7 +2,7 @@ import './HelloWorldChildren.css'
 function HelloWorldChildren({name,children}) {
   return ( 
     <div>
-      {children}, {name}
+      {children} {name}
     </div>
    );
 }
