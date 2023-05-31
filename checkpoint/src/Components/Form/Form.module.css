@@ -1,0 +1,58 @@
+form{
+  display: flex;
+  flex-direction: column;
+ align-items: center;
+ text-align: start;
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.error {
+  color: red;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.form-container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-container h2 {
+  margin-bottom: 16px;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container form > * {
+  margin-bottom: 16px;
+}
+
+.form-container button {
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #45a049;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media (max-width: 600px) {
+  .card-container {
+    flex-direction: column;
+  }
+}
