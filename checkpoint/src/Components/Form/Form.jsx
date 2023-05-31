@@ -29,19 +29,29 @@ const Form = () => {
 
   const handleButtonClick = (event) => {
     event.preventDefault();
-
-    if (id.trim().length === 0 || title.trim().length === 0 || author.trim().length === 0 || coverImage.trim().length === 0) {
+  
+    if (id.trim().length < 3) {
+      setErrorMessage('O ID deve conter pelo menos 3 números.');
+      return;
+    }
+  
+    if (title.trim().length < 6) {
+      setErrorMessage('O título deve conter pelo menos 6 letras.');
+      return;
+    }
+  
+    if (author.trim().length === 0 || coverImage.trim().length === 0) {
       setErrorMessage('Por favor, preencha todos os campos do formulário.');
       return;
     }
-
+  
     const newBook = {
       id: id,
       title: title,
       author: author,
       coverImage: coverImage
     };
-
+  
     setBooks([...books, newBook]);
     setId('');
     setTitle('');
@@ -60,7 +70,7 @@ const Form = () => {
           type="text"
           value={id}
           fnOnChange={handleChangeId}
-          placeholder="ID..."
+          placeholder="ID | Deve Conter 3 números..."
         />
 
         <InputComponent
@@ -68,7 +78,7 @@ const Form = () => {
           type="text"
           value={title}
           fnOnChange={handleChangeTitle}
-          placeholder="Título do livro | Pelo menos 3 letras..."
+          placeholder="Título do livro | Pelo menos 6 letras..."
         />
 
         <InputComponent
@@ -76,7 +86,7 @@ const Form = () => {
           type="text"
           value={author}
           fnOnChange={handleChangeAuthor}
-          placeholder="Autor do livro | | Pelo menos 6 letras..."
+          placeholder="Autor do livro |"
         />
 
         <InputComponent
