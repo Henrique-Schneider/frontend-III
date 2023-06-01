@@ -86,7 +86,7 @@ const Form = () => {
           type="text"
           value={author}
           fnOnChange={handleChangeAuthor}
-          placeholder="Autor do livro |"
+          placeholder="Autor do livro"
         />
 
         <InputComponent
